@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact- LUDE.COM</title>
+    <link rel="icon" href="images\web logo.jfif">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="images\web logo.jfif">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="work.html">MY WORK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="form">
+            <h1>Contact Me</h1>
+            <form>
+               <div class="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name......">
+               </div>
+
+               <div class="form">
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address" placeholder="Where Do You Live?">
+               </div>
+
+                <div class="form">
+                  <label for="location">State:</label>
+                <input type="state" id="state" name="state" placeholder="Your State of Location">
+                </div>
+                <div class="form">
+                  <label for="job hire">Give Me Any Job</label>
+                <select name="jobs" id="jobs">
+                    <option value=""></option>
+                    <option value="web design">Web Design</option>
+                    <option value="fullstack web development">FullStack Web Development</option>
+                    <option value="web maintenance">Web Maintainance</option>
+                    <option value="frontend development">FrontEnd Development</option>
+                    <option value="backend development">BackEnd Development</option>
+                    <option value="software developer">Software Development</option>
+                    <option value="course developer & presenter">Course Development & Presenter</option>
+                    <option value="system analyst">System Analyst</option>
+                    <option value="website management">Website Development</option>
+                </select>
+                </div>
+                <div class="form">
+                  <label for="message">Send A Message:</label>
+                 <textarea type="message" id="message" name="message" ></textarea>
+                </div>
+                <div class="form">
+                  <button id="notifyBtn">Send</button>
+                </div>
+            </form>
+            <div class="c">
+              <p><h3><span>Phone Number:</span></h3></p>
+            <p><h3>08113331113 or 09036090044</h3></p>
+            <p><h3><span>Address:</span></h3></p>
+            <p><h3>26, Anana Ekong Street, Uyo, Akwa Ibom State.</h3></p>
+            </div>
+        </div>
+        <script>
+            // Request permission on page load
+            document.addEventListener('DOMContentLoaded', function () {
+              if (Notification.permission !== 'granted') {
+                Notification.requestPermission();
+              }
+            });
+        
+            // Function to show a notification
+            function showNotification() {
+              if (Notification.permission === 'granted') {
+                new Notification('Hello!', {
+                  body: 'Your Message has been sent successfully!',
+                  icon: 'https://cdn-icons-png.flaticon.com/512/1827/1827370.png' // optional icon
+                });
+              } else {
+                alert('Notifications are blocked. Please enable them in your browser settings.');
+              }
+            }
+        
+            // Add event listener to the button
+            document.getElementById('notifyBtn').addEventListener('click', showNotification);
+          </script>
+          <img src="images\Luis.jpg" class="bottom-right-img">
+          <div class="icons">
+            <a href="https://facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://x.com"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        
+       
+</body>
+</html>
